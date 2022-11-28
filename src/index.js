@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//수정코드
+import { BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* 수정시작 */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    {/* 수정끝 */}
   </React.StrictMode>
 );
 

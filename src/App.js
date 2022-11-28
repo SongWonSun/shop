@@ -8,7 +8,6 @@ import {useState} from 'react';
 // import jp5 from './img/jp5.png';
 import {Items} from './Items';
 import $ from 'jquery';
-
 function App() {
 
   let arr = [1,2,3,4,5,6,7,8];
