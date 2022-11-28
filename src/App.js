@@ -1,6 +1,8 @@
 import './App.css';
+// eslint-disable-next-line no-unused-vars
 import {Button, Container, Navbar, Nav} from 'react-bootstrap';
 // import {useState} from 'react';
+// eslint-disable-next-line no-unused-vars
 import {Routes, Route, Link, useNavigate, Outlet} from 'react-router-dom';
 import {Detail} from './Detail';
 import {Items} from './Items';

@@ -20,8 +20,8 @@ padding: 0.5em 1em;
 border-radius: 5px;
 outline:none;
 border:none;
-background-color: ${props => props.bg};
-color: ${props => props.cl};
+background-color: ${props => props.bg}; //부모한테 받은 props.bg 색상을 가져와라
+color: ${props => props.cl}; //부모한테 받은 props.cl 색상을 가져와라
 `
 export const Container = styled.div`
  width: 1200px;

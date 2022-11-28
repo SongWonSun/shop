@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+// eslint-disable-next-line no-unused-vars
 import $ from 'jquery';
 import {useNavigate} from 'react-router-dom';
 
