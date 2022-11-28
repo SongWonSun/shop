@@ -41,7 +41,7 @@ function App() {
         <div className='row'>
           {
             arr.map((v,i) => {
-              if(v>3) v=0;
+              if(v>8) v=0;
               return( <Items key={i} ord={v}/>)
             })
           }

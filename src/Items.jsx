@@ -8,7 +8,7 @@ export const Items = (props) => {
     let divStyle = {backgroundImage: 'url('+process.env.PUBLIC_URL + '/img/jp'+props.ord+'.png)'};
 
     return(
-        <div className='col-lg-4' onClick={(e) => {
+        <div className='col-lg-3' onClick={(e) => {
             let x = e.pageX;
             const y = e.pageY;
             console.log(`x축: ${x}, y축: ${y}`);
