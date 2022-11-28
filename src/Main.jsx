@@ -28,9 +28,9 @@ function Main() {
             return <Items key={i} ord={v} />;
           })}
         </div>
-      </div>
-      <div className="modBox" style={{ display: "nonew" }}></div>
-      <div style={{ width: "100%", position: "relative" }}>
+      
+      {/* <div className="modBox" style={{ display: "none" }}> */}
+      {/* <div style={{ width: "100%", position: "relative" }}>
         <div
           style={mstyle}
           onClick={() => {
@@ -39,12 +39,15 @@ function Main() {
         >
           X
         </div>
-      </div>
+      </div> */}
+      {/* </div> */}
       <br />
       <div>
         <h3></h3>
         <p></p>
       </div>
+      </div>
     </>
   );
 }
+export default Main;
