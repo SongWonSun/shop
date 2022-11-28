@@ -6,7 +6,6 @@ export const Detail =(props) =>{
     let [likecnt, likecntchk] = useState(0);
     let {pid, ln} = useParams();
     if(pid > ln) pid =0;
-
     return(
         <div className='MainImgDiv'>
             <div className='imgBox'>

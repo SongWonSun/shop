@@ -158,7 +158,6 @@ function App(){
             <Nav className='me-auto'>
               <Nav.Link onClick={()=> navigate('/')}>Home</Nav.Link>
               <Nav.Link onClick={()=> navigate('/cart')}>Cart</Nav.Link>
-              <Nav.Link onClick={()=> navigate('/detail')}>Detail</Nav.Link>
               <Nav.Link onClick={()=> navigate('/about')}>회사정보</Nav.Link>
               <Nav.Link onClick={()=> navigate('/about/member')}>사원정보</Nav.Link>
               <Nav.Link onClick={()=> navigate('/about/loc')}>회사위치</Nav.Link>
@@ -175,9 +174,9 @@ function App(){
             <div className="row">
               {
                 arr.map((v, i) => {
-                if (v > 8) v = 0;
+                if (v > arr.length) v = 0;
                 return (
-                <Items key={i} ord={v} arrlen={3} />
+                <Items key={i} ord={v} arrlen={arr.length} />
                 )
               })
               }
@@ -188,9 +187,9 @@ function App(){
         <Route path='/detail/:pid/:ln' element={<Detail />} />
         <Route path='/cart' element={<div>장바구니 페이지 임</div>} />
         {/* 일반 라우터 표현*/}
-        {/* <Route path=”/about” element={<About />} 
-            <Route path=“/about/member” element={<Member />}
-            <Route path=”/about/loc” element={<Loc />} /> */}
+        {/* <Route path='/about' element={<About />} 
+            <Route path='/about/member' element={<Member />}
+            <Route path='/about/loc' element={<Loc />} /> */}
 
         {/* nested(중첩) 라우터 표현 */}
         <Route path='/about' element={<About />}>

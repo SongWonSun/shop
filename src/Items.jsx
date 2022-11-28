@@ -77,6 +77,7 @@ import {useNavigate} from 'react-router-dom';
 //     );
 // }
 
+//props는 부모에서 멀 보냈다는 뜻
 export const Items = (props) =>{
     let [likecnt, likecntchk] =useState(0);
     let navigate =useNavigate();
