@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //수정코드
 import { BrowserRouter} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -14,11 +16,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // );
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     {/* 수정시작 */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
     {/* 수정끝 */}
+    </Provider>
   </React.StrictMode>
 );
 
