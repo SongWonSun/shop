@@ -129,7 +129,7 @@
 /*수정코드*/
 .App .main-bg{
   height:600px;
-  background-image: url('../public/img/tree.png');
+  /* background-image: url('../public/img/tree.png'); */
   background-size: cover;
   background-position: center;
 }

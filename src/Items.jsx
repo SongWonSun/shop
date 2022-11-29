@@ -111,7 +111,7 @@ export const Items = (props) =>{
     let navigate = useNavigate();
     let idx = props.ord;
     let idxImg = props.ord > props.arrlen ? 0 : props.ord;
-    let istyle = {backgroundImage: 'url('+process.env.PUBLIC_URL +'/img/jp'+idxImg+'.png'};
+    let istyle = {backgroundImage: `url(/shop/img/jp${idxImg}.png)`};
 
     return(
         <div className='col-lg-3' onClick={(e) => {

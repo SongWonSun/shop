@@ -22,12 +22,12 @@ export const Detail =(props) =>{
     let [likecnt, likecntchk] = useState(0);
     let {pid, ln} = useParams();
     let nav = useNavigate();
-    let pidImg = pid> ln ? 0: pid;
+    let pidImg = pid > ln ? 0 : pid;
     
     return(
         <Container>
             <div className='imgBox'>
-                <div className='imgCon' alt={"이미지"+pid} style={{backgroundImage:'url('+process.env.PUBLIC_URL + '/img/jp' + pidImg + '.png'}} />
+                <div className='imgCon' alt={"이미지"+pid} style={{backgroundImage:`url(/shop/img/jp${pidImg}.png)`}} />
             <h4>상품{pid}</h4>
             <p>상품{pid} 설명</p>
             <p className='lkcnt' onClick={()=> likecntchk(++likecnt)}>좋아요 {likecnt}</p>
