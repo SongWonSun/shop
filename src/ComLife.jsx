@@ -54,7 +54,7 @@ function ComLife(){
         return() => {
             실행코드...;
         }
-    }, []);
+    }, []); =>한번만 실행해라
     */
 
     return(
