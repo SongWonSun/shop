@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from 'react';
 // eslint-disable-next-line no-unused-vars
-import $ from 'jquery';
+// import $ from 'jquery';
 import {useNavigate} from 'react-router-dom';
 
 
@@ -79,27 +79,49 @@ import {useNavigate} from 'react-router-dom';
 // }
 
 //props는 부모에서 멀 보냈다는 뜻
+// export const Items = (props) =>{
+//     let [likecnt, likecntchk] =useState(0);
+//     let navigate =useNavigate();
+//     return(
+//         <div className='col-lg-3'>
+//         {/* //     navigate('/detail?id='+props.ord);
+//         //     //window.location.href = '/datail';
+//         //     // let x = e.pageX;
+//         //     // let y = e.pageY;
+//         //     // console.log(`mouse가 클릭된 위치의 x축: ${x}, y축: ${y}`);
+//         //     // $('.modBox').show();
+//         //     // $('.modBox').css({top: y +'px', left:x +'px'});
+//         //     // $('.modBox h3').text('상품 '+ props.ord);
+//         //     // $('.modBox p').text('상품 '+props.ord+' 설명'); */}
+//             <div className='imgBox'>
+//                 <div className='imgCon' alt={"이미지"+props.ord} 
+//                 style={{backgroundImage:'url('+process.env.PUBLIC_URL +'/img/jp'+props.ord+'.png)'}} 
+//                 onClick={(e) => {navigate('/detail/'+props.ord+'/'+props.arrlen);}} />
+//             <h4>상품{props.ord}</h4>
+//             <p>상품{props.ord} 설명</p>
+//             <p className='lkcnt' onClick={()=> likecntchk(++likecnt)}>좋아요 {likecnt}</p>
+//             </div>
+//         </div>
+//     );
+// }
+
+
 export const Items = (props) =>{
-    let [likecnt, likecntchk] =useState(0);
-    let navigate =useNavigate();
+    let [likecnt, likecntchk] = useState(0);
+    let navigate = useNavigate();
+    let idx = props.ord;
+    let idxImg = props.ord > props.arrlen ? 0 : props.ord;
+    let istyle = {backgroundImage: 'url('+process.env.PUBLIC_URL +'/img/jp'+idxImg+'.png'};
+
     return(
-        <div className='col-lg-3'>
-        {/* //     navigate('/detail?id='+props.ord);
-        //     //window.location.href = '/datail';
-        //     // let x = e.pageX;
-        //     // let y = e.pageY;
-        //     // console.log(`mouse가 클릭된 위치의 x축: ${x}, y축: ${y}`);
-        //     // $('.modBox').show();
-        //     // $('.modBox').css({top: y +'px', left:x +'px'});
-        //     // $('.modBox h3').text('상품 '+ props.ord);
-        //     // $('.modBox p').text('상품 '+props.ord+' 설명'); */}
+        <div className='col-lg-3' onClick={(e) => {
+            navigate('/detail/'+idx+'/'+props.arrlen);
+        }}>
             <div className='imgBox'>
-                <div className='imgCon' alt={"이미지"+props.ord} 
-                style={{backgroundImage:'url('+process.env.PUBLIC_URL +'/img/jp'+props.ord+'.png)'}} 
-                onClick={(e) => {navigate('/detail/'+props.ord+'/'+props.arrlen);}} />
-            <h4>상품{props.ord}</h4>
-            <p>상품{props.ord} 설명</p>
-            <p className='lkcnt' onClick={()=> likecntchk(++likecnt)}>좋아요 {likecnt}</p>
+                <div className='imgCon' alt={"이미지"+idx}  style={istyle} />
+                <h4>상품{idx}</h4>
+                <p>상품{idx} 설명</p>
+                <p className='lkcnt' onClick={()=> likecntchk(++likecnt)}>좋아요 {likecnt}</p>
             </div>
         </div>
     );
